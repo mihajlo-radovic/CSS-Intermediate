@@ -1,0 +1,317 @@
+.flexbox{
+    background-color: aqua;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100px;
+    justify-content: space-around;
+    align-items: last baseline;
+}
+
+.jedan{
+    display: flex;
+    background-color: lightblue;
+    flex-basis: 300px;
+    justify-content: center;
+}
+
+.dva{
+    display: flex;
+    background-color: lightcoral;
+    flex-basis: 300px;
+    justify-content: end;
+}
+
+.tri{
+    display: flex;
+    background-color: lightcyan;
+    flex-basis: 300px;
+    justify-content: space-around;
+}
+
+.cetiri{
+    display: flex;
+    background-color: lightgoldenrodyellow;
+    flex-basis: 300px;
+    justify-content: end;
+}
+
+
+
+.wrap{
+    background-color: aqua;
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100px;
+    align-content: space-evenly;
+}
+
+.j{
+    display: flex;
+    background-color: lightblue;
+    flex-basis: 50px;
+    justify-content: center;
+}
+
+.d{
+    display: flex;
+    background-color: lightcoral;
+    flex-basis: 50px;
+    justify-content: end;
+}
+
+.t{
+    display: flex;
+    background-color: lightcyan;
+    flex-basis: 50px;
+    justify-content: space-around;
+}
+
+.c{
+    display: flex;
+    background-color: lightgoldenrodyellow;
+    flex-basis: 50px;
+    justify-content: end;
+}
+
+
+
+.stavke{
+    background-color: aqua;
+    margin-top: 1%;
+    display: flex;
+    height: 200px;
+    width: 300px;
+    justify-content: center;
+}
+
+.blue{
+    background-color: lightblue;
+    height: 25%;
+    flex: 1 3 0;
+    order: 1;
+    align-self: center;
+}
+
+.red{
+    background-color: lightcoral;
+    height: 75%;
+    flex: 3 2 0;
+    order: 3;
+}
+
+.cyan{
+    background-color: lightcyan;
+    height: 100%;
+    flex-grow: 2;
+    order: 4;
+}
+
+.yellow{
+    background-color: lightgoldenrodyellow;
+    height: 50%;
+    flex-basis: 20px;
+    flex-shrink: 0;
+    order: 2;
+}
+
+
+
+.grid{
+    margin-top: 1%;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+    grid-template-areas: 'header header header';
+}
+
+.gblue{
+    background-color: lightblue;
+    grid-column: 1 / 5;
+}
+
+.gred{
+    background-color: lightcoral;
+    grid-row: 2 / 4;
+}
+
+.gcyan{
+    background-color: lightcyan;
+    grid-area: 2 / 2 / 5 / 5;
+}
+
+.gyellow{
+    background-color: lightgoldenrodyellow;
+    grid-area: header;
+}
+
+
+
+
+.gridauto{
+    margin-top: 5%;
+    background-color: pink;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 300px;
+    grid-auto-rows: 40px;
+}
+
+.gablue{
+    background-color: lightblue;
+}
+
+.gared{
+    background-color: lightcoral;
+}
+
+.gacyan{
+    background-color: lightcyan;
+}
+
+.gayellow{
+    background-color: lightgoldenrodyellow;
+}
+
+
+
+.positioning{
+    margin-top: 2%;
+    background-color: darkseagreen;
+    height: 400px;
+    position: relative;
+}
+
+.absolute{
+    background-color: bisque;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.fixed{
+    font-size: 64px;
+    position: fixed;
+    left: 70%;
+}
+
+.sticky{
+    font-size: 64px;
+    position: sticky;
+    top: 0;
+}
+
+
+
+
+.overflow{
+    border: 1px solid;
+    width: 20%;
+    height: 200px;
+    overflow: auto;
+    margin-bottom: 2%;
+}
+
+
+
+.stacking{
+    margin-top: 2%; 
+    background-color: dodgerblue;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.s1{
+    background-color: brown;
+    margin-left: 70px;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    z-index: 5;
+}
+.s2{
+    background-color: yellow;
+    margin-left: 120px;
+    margin-top: 60px;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    z-index: 22;
+}
+.s3{
+    background-color: green;
+    margin-left: 100px;
+    margin-top: 10px;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    z-index: 3;
+}
+
+
+
+
+@media(max-width: 768px){
+    .flexbox{
+        width: min(100%, 600px);
+        font-size: clamp(1rem, 2.5vw, 2rem);
+    }
+    .img{
+        width: min(100%, 600px);
+        height: auto;
+    }
+}
+
+.image img{
+    max-width: 50%;
+}
+
+
+
+
+.animation{
+    background-color: beige;
+    width: 40%;
+    height: 300px;
+}
+
+.animation:hover{
+    background-color: aqua;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0.2s;
+}
+
+.atext{
+    font-size: 50px;
+    transform: translate(50px, 30px) rotate(230deg) skew(15deg);
+}
+
+.atext2{
+    font-size: 20px;
+    animation: animated 2000ms infinite normal;
+}
+
+@keyframes animated{
+    0%{
+        transform: translate(0, 0);
+    }
+    25%{
+        transform: translate(20px, 20px);
+    }
+    50%{
+        transform: translate(0, 20px);
+    }
+    75%{
+        transform: translate(20px, 0);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
